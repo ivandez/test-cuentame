@@ -24,7 +24,7 @@ const Post = sequelize.define(
 );
 
 Post.hasMany(Comment, {
-  foreignKey: "post_id",
+  foreignKey: "PostId",
 });
 
 Comment.belongsTo(Post);

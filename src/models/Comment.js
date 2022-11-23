@@ -13,7 +13,7 @@ const Comment = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_id: {
+    PostId: {
       type: DataTypes.STRING,
       allowNull: false,
     },
