@@ -23,13 +23,10 @@ class PostController {
 
     try {
       await Post.create({ title, body });
-      res.status(200, "post created");
+
+      res.status(200).send("post created");
     } catch (error) {
-      console.log(
-        "🚀 ~ file: post.js ~ line 25 ~ PostController ~ reate ~ error",
-        error
-      );
-      return res.status(500).json({ error });
+      return res.status(500).send({ error });
     }
   }
 
