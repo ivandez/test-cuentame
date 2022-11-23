@@ -1,6 +1,12 @@
 import express from "express";
 import logger from "morgan";
 import sequelize from "./db/dbConnection.js";
+import multer from "multer";
+
+const upload = multer();
+
+// Routers
+import { router as postRouter } from "./routes/post/post.js";
 
 const app = express();
 
@@ -11,9 +17,8 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/test", (req, res) => {
-  res.send("testing");
-});
+// Setting routes
+app.use("/posts", upload.none(), postRouter);
 
 app.listen(port, () => {
   console.log(`Server port: ${port}`);
