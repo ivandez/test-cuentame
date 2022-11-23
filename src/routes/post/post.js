@@ -4,6 +4,8 @@ import postValidations from "../../utils/postValidation.js";
 
 const router = express.Router();
 
+router.get("/search-by-title", postController.searchByTitle);
+
 router.get("/all", postController.index);
 
 router.get("/:id", postController.show);

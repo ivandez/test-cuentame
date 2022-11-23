@@ -1,7 +1,7 @@
 import { validationResult } from "express-validator";
+import { Op } from "sequelize";
 import Post from "../models/post.js";
 import Comment from "../models/Comment.js";
-
 class PostController {
   async index(req, res) {
     const posts = await Post.findAll();
@@ -88,6 +88,18 @@ class PostController {
     const comments = await Comment.findAll({ where: { PostId: postId } });
 
     res.status(200).send({ comments });
+  }
+
+  async searchByTitle(req, res) {
+    const { title } = req.query;
+
+    const posts = await Post.findAll({
+      where: {
+        title: { [Op.substring]: title },
+      },
+    });
+
+    res.status(400).send({ posts });
   }
 }
 
