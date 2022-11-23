@@ -8,7 +8,7 @@ router.get("/all", postController.index);
 
 router.get("/:id", postController.show);
 
-router.put("/:id", postController.edit);
+router.put("/:id", postValidations, postController.edit);
 
 router.post("/", postValidations, postController.create);
 
