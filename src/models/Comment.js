@@ -1,32 +1,26 @@
 import { DataTypes } from "sequelize";
 
 import sequelize from "../db/dbConnection.js";
-import Comment from "./Comment.js";
 
-const Post = sequelize.define(
-  "Post",
+const Comment = sequelize.define(
+  "Comment",
   {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     body: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    img_url: {
+    user_name: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    PostId: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
-    tableName: "posts",
+    tableName: "comments",
   }
 );
 
-Post.hasMany(Comment, {
-  foreignKey: "PostId",
-});
-
-Comment.belongsTo(Post);
-
-export default Post;
+export default Comment;
