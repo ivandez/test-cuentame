@@ -24,7 +24,7 @@ class PostController {
     try {
       await Post.create({ title, body });
 
-      res.status(200).send("post created");
+      res.status(200).send({ message: "post created" });
     } catch (error) {
       return res.status(500).send({ error });
     }
