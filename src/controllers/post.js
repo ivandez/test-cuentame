@@ -55,10 +55,14 @@ class PostController {
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { title, body } = req.body;
+    const { title, body, img } = req.body;
+    console.log(
+      "🚀 ~ file: post.js ~ line 59 ~ PostController ~ create ~ req.file",
+      req.file
+    );
 
     try {
-      await Post.create({ title, body });
+      // await Post.create({ title, body });
 
       res.status(200).send({ message: "post created" });
     } catch (error) {
