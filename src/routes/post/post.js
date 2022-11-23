@@ -14,4 +14,6 @@ router.post("/", postValidations, postController.create);
 
 router.delete("/:id", postController.delete);
 
+router.get("/:postId/get-comments/", postController.getComments);
+
 export { router };

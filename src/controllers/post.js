@@ -1,5 +1,7 @@
 import { validationResult } from "express-validator";
 import Post from "../models/post.js";
+import Comment from "../models/Comment.js";
+
 class PostController {
   async index(req, res) {
     const posts = await Post.findAll();
@@ -78,6 +80,14 @@ class PostController {
     } catch (error) {
       return res.status(500).send({ error });
     }
+  }
+
+  async getComments(req, res) {
+    const { postId } = req.params;
+
+    const comments = await Comment.findAll({ where: { PostId: postId } });
+
+    res.status(200).send({ comments });
   }
 }
 
