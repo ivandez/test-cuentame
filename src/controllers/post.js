@@ -57,9 +57,14 @@ class PostController {
 
     const { title, body } = req.body;
 
-    try {
-      const img_url = `http://localhost:3000/images/${req.file.filename}`;
+    let img_url;
 
+    if (req.file) {
+      img_url = `http://localhost:3000/images/${req.file.filename}`;
+    } else {
+      img_url = null;
+    }
+    try {
       await Post.create({ title, body, img_url });
 
       res.status(200).send({ message: "post created" });

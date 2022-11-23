@@ -5,12 +5,12 @@ import multer from "multer";
 import path from "path";
 import { fileURLToPath } from "url";
 
+// Set files support
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
 const storage = multer.diskStorage({
-  // notice you are calling the multer.diskStorage() method here, not multer()
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../public/images/"));
   },
@@ -21,8 +21,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage }); //provide the return value from
-// const upload = multer({ dest: path.join(__dirname, "../public/images/") });
+const upload = multer({ storage });
 
 // Routers
 import { router as postRouter } from "./routes/post/post.js";
