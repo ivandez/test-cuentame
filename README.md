@@ -51,3 +51,6 @@ Normalmente manejo mis backend con
 Para esta prueba decidí omitir las clases de servicios y clases repositorios ya que considero que para este MVP se puede hacer consultas a la DB dentro de los controladores.
 ### No hay tablas de usuarios
 En el pdf no se especifica que se necesite una tabla de usuario, por ende el nombre del usuario se pasa con un string al momento de crear un comentario, sin embargo para cumpliar con las formas normales seria bueno tener una tabla unica para los usuarios, sin embargo bajo mi compresion de lo que dice el pdf dicidí no agregarla
+### Git y ramas
+Decidí usar una estrategia de tener una rama main, que se usa para producción, una rama develop donde se mergea las nuevas features y varias ramas que usan semantic version para desarrollar las nuevas features.
+Una vez se termina una feature, esta se mergea con develop y después develop se mergea con main
