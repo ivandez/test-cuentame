@@ -34,8 +34,8 @@ Este proyecto fue desarrollado con ubuntu 20 y:
 
 Adjunte algunas ayudas para hacer más facil las pruebas de este proyecto
 
-1. En esta carpeta se encuentra una colección de rutas de la API documentadas en POSTMAN, hay que importar dicho archivo dentro de la app de POSTMAN
-2. En esta carpeta esta el DUMP de la base de datos con datos ya de pruebas
+1. [En esta carpeta se encuentra una colección de rutas de la API documentadas](https://github.com/ivandez/test-cuentame/tree/v1.0.0-documentation/help/rutas%20documentadas%20para%20POSTMAN) en POSTMAN, hay que importar dicho archivo dentro de la app de POSTMAN
+2. [En esta carpeta esta el DUMP de la base de datos con datos de pruebas](https://github.com/ivandez/test-cuentame/tree/v1.0.0-documentation/help/rutas%20documentadas%20para%20POSTMAN)
 
 
 ## Explicación sobre mis soluciones
