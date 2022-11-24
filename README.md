@@ -34,8 +34,8 @@ Este proyecto fue desarrollado con ubuntu 20 y:
 
 Adjunte algunas ayudas para hacer más facil las pruebas de este proyecto
 
-1. [En esta carpeta se encuentra una colección de rutas de la API documentadas](https://github.com/ivandez/test-cuentame/tree/v1.0.0-documentation/help/rutas%20documentadas%20para%20POSTMAN) en POSTMAN, hay que importar dicho archivo dentro de la app de POSTMAN
-2. [En esta carpeta esta el DUMP de la base de datos con datos de pruebas](https://github.com/ivandez/test-cuentame/tree/v1.0.0-documentation/help/rutas%20documentadas%20para%20POSTMAN)
+1. [En esta carpeta se encuentra una colección de rutas de la API documentadas](https://github.com/ivandez/test-cuentame/tree/master/help/rutas%20documentadas%20para%20POSTMAN) en POSTMAN, hay que importar dicho archivo dentro de la app de POSTMAN
+2. [En esta carpeta esta el DUMP de la base de datos con datos de pruebas](https://github.com/ivandez/test-cuentame/tree/master/help/DUMP%20MYSQL)
 
 
 ## Explicación sobre mis soluciones
@@ -52,5 +52,5 @@ Para esta prueba decidí omitir las clases de servicios y clases repositorios ya
 ### No hay tablas de usuarios
 En el pdf no se especifica que se necesite una tabla de usuario, por ende el nombre del usuario se pasa con un string al momento de crear un comentario, sin embargo para cumpliar con las formas normales seria bueno tener una tabla unica para los usuarios, sin embargo bajo mi compresion de lo que dice el pdf dicidí no agregarla
 ### Git y ramas
-Decidí usar una estrategia de tener una rama main, que se usa para producción, una rama develop donde se mergea las nuevas features y varias ramas que usan semantic version para desarrollar las nuevas features.
+Decidí usar una estrategia de tener una rama master, que se usa para producción, una rama develop donde se mergea las nuevas features y varias ramas que usan semantic version para desarrollar las nuevas features.
 Una vez se termina una feature, esta se mergea con develop y después develop se mergea con main
